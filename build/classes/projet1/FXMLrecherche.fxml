@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="286.0" prefWidth="454.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="projet1.FXMLrechercheController">
+   <children>
+      <Label layoutX="92.0" layoutY="29.0" text="Le fichier que vous cherchez est:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="330.0" layoutY="214.0" prefHeight="31.0" prefWidth="81.0" />
+      <JFXTextField fx:id="titre" layoutX="109.0" layoutY="86.0" prefHeight="31.0" prefWidth="169.0" />
+      <JFXTextArea fx:id="source" layoutX="109.0" layoutY="132.0" prefHeight="82.0" prefWidth="169.0" />
+      <Label layoutX="50.0" layoutY="87.0" text="Titre:">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="173.0" text="Source">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="user" layoutX="341.0" layoutY="76.0" prefHeight="21.0" prefWidth="42.0" />
+   </children>
+</AnchorPane>

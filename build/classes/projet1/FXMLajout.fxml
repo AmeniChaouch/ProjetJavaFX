@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="565.0" prefWidth="924.0" style="-fx-background-color: #330033;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet1.FXMLajoutController">
+    <stylesheets>
+        <URL value="@fxmlajout.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="262.0" fitWidth="328.0" layoutX="22.0" layoutY="87.0">
+         <image>
+            <Image url="@../media/Image1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="163.0" layoutY="375.0" prefHeight="37.0" prefWidth="75.0" text="Ajout" textAlignment="CENTER" textFill="#c6aa0b">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="412.0" prefHeight="37.0" prefWidth="328.0" text="Ajout vous permet d'ajouter un fichier a vos tags " textAlignment="CENTER" textFill="#ededed" />
+      <Pane layoutX="389.0" layoutY="8.0" prefHeight="550.0" prefWidth="524.0" style="-fx-background-color: #EDEDED; -fx-background-radius: 20px;">
+         <children>
+            <Pane layoutX="9.0" layoutY="14.0" prefHeight="181.0" prefWidth="506.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+               <children>
+                  <JFXButton fx:id="ajout" buttonType="RAISED" layoutX="25.0" layoutY="43.0" onAction="#handleButtonAction" prefHeight="78.0" prefWidth="459.0" style="-fx-border-radius: 20PX; -fx-background-color: #EDEDED; -fx-background-radius: 20PX; -fx-border-width: 3PX; -fx-border-style: DASHED; -fx-border-color: #828181;" text=" " textFill="#828181" />
+                  <FontAwesomeIconView fill="#828181" glyphName="PLUS" layoutX="245.0" layoutY="94.0" size="3EM" />
+                  <TextField fx:id="sourcefichier" layoutX="25.0" layoutY="134.0" prefHeight="37.0" prefWidth="459.0">
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </TextField>
+                  <Label layoutX="33.0" layoutY="-3.0" prefHeight="37.0" prefWidth="350.0" text="Veuillez choisir un fichier pour l'ajouter a vos tags :" textFill="#535353" />
+               </children>
+            </Pane>
+            <Pane layoutX="9.0" layoutY="206.0" prefHeight="297.0" prefWidth="506.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+               <children>
+                  <Label layoutX="24.0" layoutY="4.0" text="Auteur :" textFill="#535353" />
+                  <JFXTextField fx:id="auteur" focusColor="#ffcc00" layoutX="24.0" layoutY="14.0" prefHeight="31.0" prefWidth="179.0" />
+                  <JFXTextArea fx:id="commentaires" focusColor="#ffcc00" layoutX="294.0" layoutY="192.0" prefHeight="88.0" prefWidth="179.0" />
+                  <Label layoutX="20.0" layoutY="152.0" text="Tags :" textFill="#535353" />
+                  <Label layoutX="21.0" layoutY="81.0" text="Titre :" textFill="#535353" />
+                  <Label layoutX="287.0" layoutY="4.0" text="Résumé :" textFill="#535353" />
+                  <JFXTextField fx:id="titre" focusColor="#ffcc00" layoutX="24.0" layoutY="92.0" prefHeight="31.0" prefWidth="179.0" styleClass="titre" stylesheets="@../stylesheet/fxmlajout.css" />
+                  <JFXTextArea fx:id="resume" focusColor="#ffcc00" layoutX="294.0" layoutY="37.0" prefHeight="88.0" prefWidth="179.0" />
+                  <JFXTextArea fx:id="tags" focusColor="#ffcc00" layoutX="24.0" layoutY="192.0" prefHeight="88.0" prefWidth="179.0" styleClass="tags" stylesheets="@../stylesheet/fxmlajout.css" />
+                  <Label layoutX="280.0" layoutY="152.0" text="Commentaires :" textFill="#535353" />
+               </children>
+            </Pane>
+            <Button fx:id="ajouter" layoutX="204.0" layoutY="512.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="116.0" style="-fx-background-color: #ffcc00; -fx-background-radius: 30px;" text="ajouter" />
+         </children>
+      </Pane>
+      <Label fx:id="tentative" layoutX="9.0" layoutY="541.0" style="-fx-background-color: white;" text=" " />
+   </children>
+</AnchorPane>

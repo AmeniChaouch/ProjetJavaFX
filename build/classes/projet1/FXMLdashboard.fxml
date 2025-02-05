@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="840.0" maxWidth="1327.0" prefHeight="840.0" prefWidth="1159.0" style="-fx-background-color: #330033;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet1.FXMLdashboardController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="840.0" prefWidth="225.0">
+         <children>
+            <ImageView fitHeight="128.0" fitWidth="177.0" layoutX="52.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../media/final.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="menu" layoutX="9.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="226.0" styleClass="transparent" stylesheets="@../stylesheet/fxmldashboard.css" text="Mes tags" textFill="#ededed" textOverrun="CLIP">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView accessibleRole="BUTTON" fill="#ededed" glyphName="TAGS" size="1.5em" wrappingWidth="21.285715103149414" />
+               </graphic>
+            </Button>
+            <Button fx:id="dashboard" layoutX="8.0" layoutY="188.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="48.0" prefWidth="226.0" styleClass="transparent" stylesheets="@../stylesheet/fxmldashboard.css" text="Modifier" textFill="#ededed" textOverrun="CLIP">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView accessibleRole="BUTTON" fill="#ededed" glyphName="COGS" size="1.5em" wrappingWidth="21.285715103149414" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="225.0" prefHeight="840.0" prefWidth="919.0">
+         <children>
+            <Pane fx:id="pane1" layoutY="54.0" prefHeight="762.0" prefWidth="922.0" style="-fx-background-color: #EDEDED; -fx-background-radius: 30px;">
+               <children>
+                  <Pane layoutX="595.0" layoutY="34.0" prefHeight="394.0" prefWidth="305.0" style="-fx-background-radius: 20px; -fx-background-color: white;">
+                     <children>
+                        <TableView fx:id="tag_user" layoutX="19.0" layoutY="56.0" prefHeight="325.0" prefWidth="250.0">
+                          <columns>
+                            <TableColumn fx:id="mots_cle" prefWidth="151.0" text="Tags" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="19.0" layoutY="14.0" text="Les tags de tous les utilisateurs" textFill="#535353">
+                           <font>
+                              <Font name="Verdana" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="14.0" layoutY="34.0" prefHeight="380.0" prefWidth="567.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="18.0" layoutY="51.0" prefHeight="38.0" prefWidth="532.0" style="-fx-background-color: #EDEDED; -fx-background-radius: 40px;">
+                           <children>
+                              <TextField fx:id="tagrecherche" prefHeight="37.0" prefWidth="562.0" promptText="Recherche de l'utilisateur par tag ici" styleClass="trans" stylesheets="@../stylesheet/fxmldashboard.css">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <JFXButton fx:id="tag" buttonType="RAISED" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="34.0">
+                                 <graphic>
+                                    <FontAwesomeIconView accessibleRole="BUTTON" fill="#525252" glyphName="SEARCH" size="2EM" strokeLineCap="ROUND" wrappingWidth="31.142857551574707" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="utilisateur_recherche" layoutX="20.0" layoutY="104.0" prefHeight="254.0" prefWidth="276.0">
+                           <columns>
+                              <TableColumn fx:id="utilisateur" prefWidth="262.0" text="Utilisateurs" />
+                              <TableColumn fx:id="titre" prefWidth="75.0" text="Titre fichier" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="18.0" layoutY="14.0" text="Utilisateurs ayant meme centre d'interet:" textFill="#535353">
+                           <font>
+                              <Font name="Verdana" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <BarChart fx:id="bar_chart" layoutX="15.0" layoutY="424.0" prefHeight="345.0" prefWidth="886.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="x" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="y" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </Pane>
+            <Pane fx:id="pane2" layoutY="9.0" prefHeight="820.0" prefWidth="922.0" style="-fx-background-color: #EDEDED; -fx-background-radius: 30px;">
+               <children>
+                  <Pane layoutX="421.0" layoutY="67.0" prefHeight="452.0" prefWidth="485.0" style="-fx-background-color: WHITE; -fx-background-radius: 20PX;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="27.0" text="Les utilisateurs inscrits:" textFill="#535353">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tableView" layoutX="14.0" layoutY="60.0" prefHeight="380.0" prefWidth="458.0">
+                          <columns>
+                            <TableColumn fx:id="nom" prefWidth="128.0" text="Utilisateur" />
+                              <TableColumn fx:id="login" prefWidth="138.0" text="Login" />
+                              <TableColumn fx:id="email" prefWidth="191.0" text="Email" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="22.0" layoutY="67.0" prefHeight="331.0" prefWidth="380.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="16.0" layoutY="14.0" prefHeight="38.0" prefWidth="351.0" style="-fx-background-color: #EDEDED; -fx-background-radius: 40px;">
+                           <children>
+                              <TextField fx:id="nom_user_tag" prefHeight="37.0" prefWidth="562.0" promptText="Rechercher les tags d'un utilisateur ici" styleClass="trans" stylesheets="@../stylesheet/fxmldashboard.css">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <JFXButton fx:id="user" buttonType="RAISED" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="34.0">
+                                 <graphic>
+                                    <FontAwesomeIconView accessibleRole="BUTTON" fill="#525252" glyphName="SEARCH" size="2EM" strokeLineCap="ROUND" wrappingWidth="31.142857551574707" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tag_user1" layoutX="14.0" layoutY="60.0" prefHeight="254.0" prefWidth="351.0">
+                           <columns>
+                              <TableColumn fx:id="mots_cle1" prefWidth="350.0" text="Tags" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+                  <HBox alignment="CENTER_LEFT" prefHeight="61.0" prefWidth="906.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="23.0" prefWidth="143.0" text="Dashboard" textFill="#535353">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Verdana Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIconView fill="#535353" glyphName="BELL" size="1.5EM">
+                           <HBox.margin>
+                              <Insets left="690.0" right="20.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <FontAwesomeIconView fill="#535353" glyphName="USER" size="1.5EM" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                     </children>
+                  </HBox>
+                  <Pane layoutX="22.0" layoutY="412.0" prefHeight="394.0" prefWidth="380.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+                     <children>
+                        <PieChart fx:id="pie_chart" layoutX="15.0" layoutY="15.0" prefHeight="367.0" prefWidth="351.0" />
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="301.0" fitWidth="458.0" layoutX="437.0" layoutY="515.0">
+                     <image>
+                        <Image url="@../media/admin.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

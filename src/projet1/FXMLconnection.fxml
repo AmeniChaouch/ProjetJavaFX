@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="490.0" prefWidth="396.0" style="-fx-background-radius: 40px; -fx-border-radius: 40px; -fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet1.FXMLconnectionController">
+   <children>
+      <TextField fx:id="name" layoutX="105.0" layoutY="235.0" prefHeight="43.0" prefWidth="239.0" promptText="Nom d'utilisateur" style="-fx-background-radius: 10px;" styleClass="tf_box" stylesheets="@../stylesheet/connexion.css" />
+      <Text fill="#252020d6" layoutX="26.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nous sommes ravis de vous retrouver!" textAlignment="CENTER" wrappingWidth="347.999995008111">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView fill="#252020" glyphName="USER" layoutX="72.0" layoutY="275.0" size="2em" text="" wrappingWidth="19.000000986270607" />
+      <FontAwesomeIconView fill="#252020" glyphName="LOCK" layoutX="74.0" layoutY="325.0" size="2em" text="" />
+      <Label fx:id="lblErrors" layoutX="76.0" layoutY="206.0" prefHeight="21.0" prefWidth="264.0" />
+      <ImageView fitHeight="96.0" fitWidth="116.0" layoutX="160.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../media/final.png" />
+         </image>
+      </ImageView>
+      <JFXPasswordField fx:id="mdp" layoutX="104.0" layoutY="301.0" prefHeight="31.0" prefWidth="241.0" promptText="Mot de passe" styleClass="tf_box" stylesheets="@../stylesheet/connexion.css" />
+      <JFXButton fx:id="se_connecter" buttonType="RAISED" layoutX="72.0" layoutY="374.0" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="272.0" style="-fx-background-color: #330033; -fx-background-radius: 30px;" text="Continuer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

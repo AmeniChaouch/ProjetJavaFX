@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="704.0" prefWidth="1125.0" style="-fx-background-color: #330033;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet1.FXMLdesktopController">
+    <stylesheets>
+        <URL value="@fxmldesktop.css" />
+    </stylesheets>
+   <children>
+      <JFXButton fx:id="ajout" buttonType="RAISED" layoutX="231.0" layoutY="359.0" onAction="#handleButtonAction" prefHeight="118.0" prefWidth="220.0" style="-fx-background-color: #471947;" text="Ajout" textFill="#ededed">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor></JFXButton>
+      <ImageView fitHeight="70.0" fitWidth="60.0" layoutX="442.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../media/final.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="tentative" layoutX="35.0" layoutY="49.0" prefHeight="34.0" prefWidth="261.0" style="-fx-background-color: #330033;" textFill="#a8a8a8">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fill="#ffcc00" glyphName="USER" layoutX="1004.0" layoutY="73.57142639160156" size="2em" stroke="#535353" />
+      <FontAwesomeIconView fill="#ffcc00" glyphName="BELL" layoutX="1043.0" layoutY="73.57142639160156" size="2em" stroke="#535353" text="" />
+      <FontAwesomeIconView fill="#ffcc00" glyphName="COG" layoutX="1087.0" layoutY="73.57142639160156" size="2em" stroke="#535353" />
+      <JFXButton fx:id="modification" buttonType="RAISED" layoutX="479.0" layoutY="241.0" onAction="#handleButtonAction" prefHeight="118.0" prefWidth="220.0" style="-fx-background-color: #471947;" text="Modifier" textFill="#ededed" />
+      <JFXButton fx:id="affichage" buttonType="RAISED" layoutX="721.0" layoutY="338.0" onAction="#handleButtonAction" prefHeight="118.0" prefWidth="220.0" style="-fx-background-color: #471947;" text="Afficher" textFill="#ededed" />
+      <Label layoutX="513.0" layoutY="14.0" prefHeight="44.0" prefWidth="132.0" style="-fx-background-color: #330033;" text="Menu Principal" textFill="#ededed">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tentative1" layoutX="35.0" layoutY="83.0" prefHeight="34.0" prefWidth="298.0" style="-fx-background-color: #330033;" text="Veuillez choisir une operation" textFill="#ededed">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="281.0" layoutY="161.0" prefHeight="38.0" prefWidth="564.0" style="-fx-background-color: #EDEDED; -fx-background-radius: 40px;">
+         <children>
+            <TextField fx:id="motcle" prefHeight="37.0" prefWidth="562.0" promptText="Rechercher vos tags ici" styleClass="trans" stylesheets="@../stylesheet/fxmldashboard.css">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="recherche" buttonType="RAISED" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="34.0">
+               <graphic>
+                  <FontAwesomeIconView accessibleRole="BUTTON" fill="#525252" glyphName="SEARCH" size="2EM" strokeLineCap="ROUND" wrappingWidth="31.142857551574707" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

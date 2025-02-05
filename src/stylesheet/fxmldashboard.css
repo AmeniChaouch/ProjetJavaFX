@@ -1,0 +1,27 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-background-radius: 40px;
+}
+.search-box{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius: 100;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+.trans{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.search-button{
+    -fx-background-color:  #ffcc00;
+    -fx-background-radius: 30;
+}
+.transparent:hover{
+    -fx-border-color:  #ffcc00;
+    -fx-border-width: 0px 0px 0px 5px;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="390.0" prefWidth="1037.0" style="-fx-background-color: #330033;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet1.FXMLaffichageController">
+   <children>
+      <TableView fx:id="tableView" layoutX="38.0" layoutY="78.0" prefHeight="272.0" prefWidth="962.0" style="-fx-background-radius: 30px;" stylesheets="@affichage.css">
+        <columns>
+          <TableColumn fx:id="auteur" prefWidth="118.0" text="Auteur" />
+          <TableColumn fx:id="titre" prefWidth="121.0" text="Titre" />
+            <TableColumn fx:id="tags" prefWidth="162.0" text="Tags" />
+            <TableColumn fx:id="resume" prefWidth="175.0" text="Resume" />
+            <TableColumn fx:id="commentaire" prefWidth="184.0" text="Commentaire" />
+            <TableColumn fx:id="source" prefWidth="201.0" text="Source" />
+        </columns>
+      </TableView>
+      <Label fx:id="tentative" layoutX="52.0" layoutY="363.0" prefHeight="21.0" prefWidth="144.0" style="-fx-background-color: white;" text=" " />
+      <Label layoutX="471.0" layoutY="28.0" prefHeight="27.0" prefWidth="166.0" text="Vos fichiers tags:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="59.0" fitWidth="59.0" layoutX="402.0" layoutY="12.0">
+         <image>
+            <Image url="@../media/final.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

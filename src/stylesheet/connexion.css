@@ -1,0 +1,61 @@
+/* 
+    Created on : 31 mars 2021, 16:05:32
+    Author     : ASUS
+*/
+* {
+dark-primary: #303F9F; //dark blue
+default-primary: #3F51B5; // blue
+light-primary: #C5CAE9; 
+text-primary: #FFFFFF; //white
+accent: #FF5252; //red
+primary-text: #212121; //noir
+secondary-text: #757575; //grey
+border-color: #BDBDBD; //grey border
+}
+.root{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+}
+
+.button{
+     -fx-border-radius: 20px;
+    -fx-background-color: #4B0082;
+    -fx-border-color:dark-primary;
+    -fx-border-width: 2.5px;
+    -fx-background-radius: 20px;
+    -fx-text-fill:dark-primary;
+   
+}
+.GridPane
+{
+    -fx-padding: 40;
+    -fx-spacing: 40;
+}
+.Label
+{
+    -fx-text-align: center;
+    -fx-text-fill: #757575;
+}
+/*.TextField{
+-fx-border: none;
+-fx-background: bottom left linear-gradient(#a9a9a9, #a9a9a9) no-repeat, bottom center linear-gradient(#a9a9a9, #a9a9a9) repeat-x, bottom right linear-gradient(#a9a9a9, #a9a9a9) no-repeat;
+}*/
+/*.TextField{
+    -fx-background-color: none;
+    -fx-border: none;
+}*/
+#fancytext{
+    -fx-text-fill: #757575;
+    -fx-font-size: 32pt;
+    -fx-font-weight: bold;
+    }
+#inscrit{
+        -fx-text-fill:text-primary ;
+        
+}
+.tf_box{
+    -fx-background-color: transparent;
+    -fx-border-color: #DEDEE4;
+    -fx-border-width: 0px 0px 1px 0px;
+}

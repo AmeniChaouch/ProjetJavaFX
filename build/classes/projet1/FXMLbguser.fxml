@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="fxml" prefHeight="400.0" prefWidth="1082.0" style="-fx-background-color: linear-gradient(to right top, #f42906, #f40042, #e4006c, #c20090, #8f27ab, #8d29a9, #8b2aa7, #892ca5, #b5008b, #d0006b, #dd0048, #dd3823);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet1.FXMLconnectionController">
+   <children>
+      <Button layoutX="94.0" layoutY="185.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="117.0" text="S'inscrire" />
+      <Label layoutX="44.0" layoutY="82.0" text="Vous n'avez pas de compte? " />
+      <Label layoutX="659.0" layoutY="93.0" text="Vous n'avez pas de compte? " />
+      <Button fx:id="se_connecter" layoutX="672.0" layoutY="185.0" mnemonicParsing="false" onAction="#open_signin" prefHeight="34.0" prefWidth="117.0" text="Se connecter" />
+      <VBox fx:id="vbox" layoutX="33.0" layoutY="-150.0" prefHeight="395.0" prefWidth="480.0" />
+   </children>
+</AnchorPane>

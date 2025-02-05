@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="704.0" prefWidth="1125.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet1.FXMLdesktopController">
+    <stylesheets>
+        <URL value="@fxmldesktop.css" />
+    </stylesheets>
+   <children>
+      <JFXButton fx:id="ajout" buttonType="RAISED" layoutX="113.0" layoutY="280.0" onAction="#handleButtonAction" prefHeight="118.0" prefWidth="220.0" text="Ajout" />
+      <HBox alignment="BOTTOM_LEFT" layoutY="35.0" prefHeight="96.0" prefWidth="1128.0" style="-fx-background-color: #330033;">
+         <children>
+            <ImageView fitHeight="96.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../media/final.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </ImageView>
+            <FontAwesomeIconView fill="#ffcc00" glyphName="USER" size="2em" stroke="#535353">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="850.0" right="20.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#ffcc00" glyphName="BELL" size="2em" stroke="#535353" text="">
+               <HBox.margin>
+                  <Insets bottom="20.0" right="20.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#ffcc00" glyphName="COG" size="2em" stroke="#535353">
+               <HBox.margin>
+                  <Insets bottom="20.0" right="20.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+      <FontAwesomeIconView fill="#330033" glyphName="TIMES" layoutX="1107.0" layoutY="22.0" size="2em" wrappingWidth="14.0" />
+      <Pane fx:id="pane2" layoutX="532.0" layoutY="205.0" prefHeight="234.0" prefWidth="428.0" style="-fx-background-color: green;">
+         <children>
+            <Pane fx:id="pane1" prefHeight="234.0" prefWidth="428.0" style="-fx-background-color: red;" />
+         </children>
+      </Pane>
+      <Button fx:id="vert" layoutX="158.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Button" />
+   </children>
+</AnchorPane>
